@@ -7,11 +7,12 @@
 <meta name="description" content="Faith Mwende — Data Analyst specializing in fraud detection, risk analytics, and fintech data pipelines. BSc Statistics, JKUAT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/typeface-glacial-indifference@1.1.14/index.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="grain"></div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -30,60 +31,18 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-
-      <div class="hero-photo-col">
-        <span class="hero-index">EX. 01</span>
-        <div class="hero-photo-frame">
-          <img src="assets/faith-headshot.jpg" alt="Portrait of Faith Mwende">
-        </div>
-        <div class="photo-tag">
-          <span class="photo-tag-row"><span>SUBJECT</span><span>F. MWENDE</span></span>
-          <span class="photo-tag-row"><span>BASE</span><span>NAIROBI, KE</span></span>
-          <span class="photo-tag-row photo-tag-verified"><span>STATUS</span><span>VERIFIED ✓</span></span>
-        </div>
-      </div>
-
-      <div class="hero-copy">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
         <p class="eyebrow">Data Analyst · Fraud &amp; Risk Analytics · Fintech</p>
-        <h1>I find where the<br>money moves <span class="hl">wrong.</span></h1>
-        <p class="hero-sub">I analyze transaction and user data to trace where fraud, risk, and revenue actually move — then build the pipelines, models, and dashboards that let risk and product teams act on it.</p>
+        <h1>I find where the money moves&nbsp;wrong.</h1>
+        <p class="hero-sub">I analyze transaction and user data to trace where fraud, risk, and revenue actually move — then build the pipelines, models, and dashboards that let risk and product teams act on it. Currently based in Nairobi, Kenya.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">See the case files</a>
           <a href="https://github.com/Mwende-Fifi" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="wrap about-inner">
-      <div class="about-copy">
-        <p class="section-label">02 — About</p>
-        <p class="about-lead">BSc Statistics graduate (JKUAT, 2026) who spent a fintech internship inside a live payments system, not a textbook one.</p>
-        <p>At Hurupay, I built anomaly detection scripts directly on payment event data, wrote multi-table SQL across MongoDB and PostgreSQL to support fraud workflows, and pulled data from open banking APIs to enrich internal datasets. I pair the raw numbers with behavioral context from Amplitude and Intercom, because a flagged transaction and a confused user are often the same event seen from two sides.</p>
-        <p>Outside of that, I work in Python, R, and SQL, and I build dashboards people without a data background can actually use. I'm looking for Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, or Junior Data Scientist roles, particularly in fintech and financial services.</p>
-
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">50+</span>
-            <span class="stat-label">students supported as Data Science TA, JKUAT</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">15%</span>
-            <span class="stat-label">avg. project score lift under that mentoring</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">2</span>
-            <span class="stat-label">databases in production — MongoDB &amp; PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-ledger">
-        <p class="ledger-caption">Live case feed — what anomaly detection looks like in practice</p>
+      <div class="hero-ledger" aria-hidden="true">
         <div class="ledger-head">
           <span>TXN_ID</span><span>AMOUNT</span><span>STATUS</span>
         </div>
@@ -94,10 +53,40 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-inner">
+      <div class="about-copy">
+        <p class="section-label">01 — About</p>
+        <p class="about-lead">BSc Statistics graduate (JKUAT, 2026) who spent a fintech internship inside a live payments system, not a textbook one.</p>
+        <p>At Hurupay, I built anomaly detection scripts directly on payment event data, wrote multi-table SQL across MongoDB and PostgreSQL to support fraud workflows, and pulled data from open banking APIs to enrich internal datasets. I pair the raw numbers with behavioral context from Amplitude and Intercom, because a flagged transaction and a confused user are often the same event seen from two sides.</p>
+        <p>Outside of that, I work in Python, R, and SQL, and I build dashboards people without a data background can actually use. I'm looking for Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, or Junior Data Scientist roles, particularly in fintech and financial services.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">students supported as Data Science TA, JKUAT</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15%</span>
+          <span class="stat-label">avg. project score improvement under that mentoring</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">databases in production use — MongoDB &amp; PostgreSQL</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2026</span>
+          <span class="stat-label">BSc Statistics, JKUAT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section id="projects" class="projects">
     <div class="wrap">
-      <p class="section-label">03 — Case Files</p>
+      <p class="section-label">02 — Case Files</p>
       <h2 class="section-title">Selected work, ordered by relevance — not by date.</h2>
 
       <div class="case-grid">
@@ -169,7 +158,7 @@
   <!-- SKILLS -->
   <section id="skills" class="skills">
     <div class="wrap">
-      <p class="section-label">04 — Skills Ledger</p>
+      <p class="section-label">03 — Skills Ledger</p>
       <h2 class="section-title">What I work with, and where.</h2>
 
       <div class="skills-table">
@@ -200,7 +189,7 @@
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="wrap contact-inner">
-      <p class="section-label">05 — Contact</p>
+      <p class="section-label">04 — Contact</p>
       <h2 class="section-title">Open to Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, and Junior Data Scientist roles.</h2>
       <div class="contact-links">
         <a href="mailto:kiindufaith7@gmail.com">kiindufaith7@gmail.com ↗</a>
