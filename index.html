@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Mwende — Data Analyst, Fraud & Risk Analytics</title>
+<meta name="description" content="Faith Mwende — Data Analyst specializing in fraud detection, risk analytics, and fintech data pipelines. BSc Statistics, JKUAT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">FAITH MWENDE</a>
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="resume-link" href="https://docs.google.com/document/d/1XjtFtDVdCbrqSVrmmW4QCXDwOPKWJB_XJ1YHS_mekwk/edit?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Data Analyst · Fraud &amp; Risk Analytics · Fintech</p>
+        <h1>I find where the money moves&nbsp;wrong.</h1>
+        <p class="hero-sub">I analyze transaction and user data to trace where fraud, risk, and revenue actually move — then build the pipelines, models, and dashboards that let risk and product teams act on it. Currently based in Nairobi, Kenya.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See the case files</a>
+          <a href="https://github.com/Mwende-Fifi" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-ledger" aria-hidden="true">
+        <div class="ledger-head">
+          <span>TXN_ID</span><span>AMOUNT</span><span>STATUS</span>
+        </div>
+        <div class="ledger-body" id="ledgerBody">
+          <!-- rows injected by script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-inner">
+      <div class="about-copy">
+        <p class="section-label">01 — About</p>
+        <p class="about-lead">BSc Statistics graduate (JKUAT, 2026) who spent a fintech internship inside a live payments system, not a textbook one.</p>
+        <p>At Hurupay, I built anomaly detection scripts directly on payment event data, wrote multi-table SQL across MongoDB and PostgreSQL to support fraud workflows, and pulled data from open banking APIs to enrich internal datasets. I pair the raw numbers with behavioral context from Amplitude and Intercom, because a flagged transaction and a confused user are often the same event seen from two sides.</p>
+        <p>Outside of that, I work in Python, R, and SQL, and I build dashboards people without a data background can actually use. I'm looking for Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, or Junior Data Scientist roles, particularly in fintech and financial services.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">students supported as Data Science TA, JKUAT</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">15%</span>
+          <span class="stat-label">avg. project score improvement under that mentoring</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">databases in production use — MongoDB &amp; PostgreSQL</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2026</span>
+          <span class="stat-label">BSc Statistics, JKUAT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="wrap">
+      <p class="section-label">02 — Case Files</p>
+      <h2 class="section-title">Selected work, ordered by relevance — not by date.</h2>
+
+      <div class="case-grid">
+
+        <article class="case-card case-card--lead">
+          <div class="case-head">
+            <span class="case-tag">CASE 01</span>
+            <span class="case-status case-status--flagged">STATUS: SCORED</span>
+          </div>
+          <h3>Credit Risk Classification</h3>
+          <p class="case-problem"><strong>Problem:</strong> Predict loan default risk from applicant financial data, where a model's blind spots have real repayment consequences.</p>
+          <p class="case-detail">Engineered domain-specific features — loan-to-income ratio, interest burden — before touching a model. Benchmarked Logistic Regression, Random Forest, and XGBoost, selecting the final classifier on cross-validated F1 to guard against overfitting rather than headline accuracy.</p>
+          <p class="case-finding"><strong>Finding:</strong> Feature engineering moved the needle more than model choice — a result worth showing lenders who default to "just add more models."</p>
+          <div class="case-tools">
+            <span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Cross-validation</span>
+          </div>
+          <a href="https://github.com/Mwende-Fifi" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
+        </article>
+
+        <article class="case-card">
+          <div class="case-head">
+            <span class="case-tag">CASE 02</span>
+            <span class="case-status case-status--cleared">STATUS: PATTERN FOUND</span>
+          </div>
+          <h3>New York Airbnb Listings, 2024 (EDA)</h3>
+          <p class="case-problem"><strong>Problem:</strong> Surface pricing and demand patterns across 20,000+ NYC listings for a host or platform deciding how to price.</p>
+          <p class="case-detail">Cleaned raw listing data — missing values, type corrections — across boroughs, room types, and review volume.</p>
+          <p class="case-finding"><strong>Finding:</strong> Review count correlates positively with price, meaning reputation itself carries measurable pricing power, independent of location or room type.</p>
+          <div class="case-tools">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+          </div>
+          <a href="https://github.com/Mwende-Fifi" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
+        </article>
+
+        <article class="case-card">
+          <div class="case-head">
+            <span class="case-tag">CASE 03</span>
+            <span class="case-status case-status--live">STATUS: LIVE</span>
+          </div>
+          <h3>Sales Performance Dashboard</h3>
+          <p class="case-problem"><strong>Problem:</strong> Give non-technical stakeholders a way to drill into sales by product, region, and time — without touching a formula.</p>
+          <p class="case-detail">Built with Pivot Tables, Pivot Charts, and Slicers for dynamic filtering across every dimension of the dataset.</p>
+          <p class="case-finding"><strong>Finding:</strong> Designed so a stakeholder could ask a new question of the data live, in the meeting, instead of requesting a follow-up report.</p>
+          <div class="case-tools">
+            <span>Excel</span><span>Pivot Tables</span><span>Power Query</span>
+          </div>
+          <a href="https://github.com/Mwende-Fifi" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
+        </article>
+
+        <article class="case-card">
+          <div class="case-head">
+            <span class="case-tag">CASE 04</span>
+            <span class="case-status case-status--shipped">STATUS: SHIPPED</span>
+          </div>
+          <h3>HealthPoint Kenya</h3>
+          <p class="case-problem"><strong>Problem:</strong> Help people describe symptoms in plain language and get routed to the right kind of healthcare facility.</p>
+          <p class="case-detail">Contributed to an AI-powered web app; integrated a Google Genkit AI flow to handle natural-language symptom queries — applied AI work outside a pure data-analysis context.</p>
+          <p class="case-finding"><strong>Finding:</strong> Proof that the same query-and-pipeline thinking behind fraud detection transfers cleanly to a different domain entirely.</p>
+          <div class="case-tools">
+            <span>Next.js</span><span>TypeScript</span><span>Google Genkit AI</span>
+          </div>
+          <a href="https://github.com/Mwende-Fifi" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <div class="wrap">
+      <p class="section-label">03 — Skills Ledger</p>
+      <h2 class="section-title">What I work with, and where.</h2>
+
+      <div class="skills-table">
+        <div class="skills-row">
+          <span class="skills-key">LANGUAGES</span>
+          <span class="skills-val">Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn) · R (dplyr, ggplot2, caret) · SQL · TypeScript</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-key">ML &amp; STATS</span>
+          <span class="skills-val">Classification · Regression · Anomaly Detection · Feature Engineering · Hypothesis Testing · Time Series</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-key">DATABASES</span>
+          <span class="skills-val">PostgreSQL · MongoDB · Query Optimization · Window Functions · Multi-table Joins</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-key">BI &amp; ANALYTICS</span>
+          <span class="skills-val">Tableau · Amplitude · Excel (Pivot Tables, Power Query, Slicers) · Google Sheets · Jupyter</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-key">TOOLS</span>
+          <span class="skills-val">Git · GitHub · VS Code · RStudio · Intercom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <p class="section-label">04 — Contact</p>
+      <h2 class="section-title">Open to Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, and Junior Data Scientist roles.</h2>
+      <div class="contact-links">
+        <a href="mailto:kiindufaith7@gmail.com">kiindufaith7@gmail.com ↗</a>
+        <a href="https://www.linkedin.com/in/faith-mwende-kiindu/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/Mwende-Fifi" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://docs.google.com/document/d/1XjtFtDVdCbrqSVrmmW4QCXDwOPKWJB_XJ1YHS_mekwk/edit?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Nairobi, Kenya</span>
+    <span>© 2026 Faith Mwende</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
