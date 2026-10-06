@@ -1,12 +1,13 @@
 /* =========================================================
    FAITH MWENDE — PORTFOLIO
    Design system: financial ledger / anomaly-flagging motif
+   Light theme — same layout, same type, paper background.
    ========================================================= */
 
 :root {
-  --paper: #EDEAE1;
-  --ink: #12202B;
-  --ink-soft: #4A5A64;
+  --paper: #F1EEE6;
+  --ink: #15171A;
+  --ink-soft: #55534C;
   --hairline: #C9C2B3;
   --flag: #D98A34;
   --flag-soft: rgba(217, 138, 52, 0.14);
@@ -32,8 +33,8 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -52,7 +53,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.035;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -61,9 +62,9 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(18, 32, 43, 0.88);
+  background: rgba(241, 238, 230, 0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(201, 194, 179, 0.18);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .header-inner {
@@ -87,10 +88,10 @@ a { color: inherit; text-decoration: none; }
 
 .main-nav a {
   font-size: 14px;
-  color: var(--hairline);
+  color: var(--ink-soft);
   transition: color 0.15s ease;
 }
-.main-nav a:hover { color: var(--paper); }
+.main-nav a:hover { color: var(--ink); }
 
 .resume-link {
   font-family: var(--font-mono);
@@ -132,7 +133,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-sub {
   font-size: 16px;
-  color: #C7CDD1;
+  color: var(--ink-soft);
   max-width: 46ch;
   margin: 0 0 32px;
 }
@@ -152,21 +153,21 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary {
   background: var(--flag);
-  color: var(--ink);
+  color: #FFFFFF;
   font-weight: 500;
 }
-.btn-primary:hover { background: #E6A054; }
+.btn-primary:hover { background: #C97B28; }
 
 .btn-ghost {
   border-color: var(--hairline);
-  color: var(--paper);
+  color: var(--ink);
 }
-.btn-ghost:hover { border-color: var(--paper); }
+.btn-ghost:hover { border-color: var(--ink); }
 
 /* ---------- HERO LEDGER (signature element) ---------- */
 .hero-ledger {
-  background: rgba(237, 234, 225, 0.03);
-  border: 1px solid rgba(201, 194, 179, 0.25);
+  background: #FFFFFF;
+  border: 1px solid var(--hairline);
   border-radius: 4px;
   overflow: hidden;
   font-family: var(--font-mono);
@@ -179,8 +180,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
-  background: rgba(201, 194, 179, 0.06);
-  border-bottom: 1px solid rgba(201, 194, 179, 0.2);
+  background: rgba(21, 23, 26, 0.03);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .ledger-body { min-height: 320px; }
@@ -190,8 +191,8 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: 1.3fr 1fr 1.1fr;
   padding: 13px 18px;
   font-size: 12.5px;
-  border-bottom: 1px solid rgba(201, 194, 179, 0.12);
-  color: #CDD3D6;
+  border-bottom: 1px solid rgba(201, 194, 179, 0.5);
+  color: var(--ink);
   opacity: 0;
   transform: translateY(6px);
   animation: rowIn 0.45s ease forwards;
@@ -237,11 +238,11 @@ section:not(.hero) { padding: 88px 0; }
   line-height: 1.25;
   margin: 0 0 48px;
   max-width: 62ch;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 /* ---------- ABOUT ---------- */
-.about { border-top: 1px solid rgba(201, 194, 179, 0.15); }
+.about { border-top: 1px solid var(--hairline); }
 
 .about-inner {
   display: grid;
@@ -255,10 +256,10 @@ section:not(.hero) { padding: 88px 0; }
   font-weight: 500;
   line-height: 1.4;
   margin: 0 0 20px;
-  color: var(--paper);
+  color: var(--ink);
 }
 
-.about-copy p { color: #C7CDD1; font-size: 15px; }
+.about-copy p { color: var(--ink-soft); font-size: 15px; }
 
 .about-stats {
   display: grid;
@@ -277,7 +278,7 @@ section:not(.hero) { padding: 88px 0; }
   font-family: var(--font-display);
   font-size: 30px;
   font-weight: 600;
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .stat-label {
@@ -289,7 +290,7 @@ section:not(.hero) { padding: 88px 0; }
 }
 
 /* ---------- PROJECTS ---------- */
-.projects { border-top: 1px solid rgba(201, 194, 179, 0.15); }
+.projects { border-top: 1px solid var(--hairline); }
 
 .case-grid {
   display: grid;
@@ -298,20 +299,20 @@ section:not(.hero) { padding: 88px 0; }
 }
 
 .case-card {
-  background: rgba(237, 234, 225, 0.03);
-  border: 1px solid rgba(201, 194, 179, 0.2);
+  background: #FFFFFF;
+  border: 1px solid var(--hairline);
   border-radius: 4px;
   padding: 28px;
   display: flex;
   flex-direction: column;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.case-card:hover { border-color: rgba(201, 194, 179, 0.45); transform: translateY(-2px); }
+.case-card:hover { border-color: var(--ink-soft); transform: translateY(-2px); }
 
 .case-card--lead {
   grid-column: 1 / -1;
-  background: rgba(217, 138, 52, 0.06);
-  border-color: rgba(217, 138, 52, 0.35);
+  background: var(--flag-soft);
+  border-color: rgba(217, 138, 52, 0.4);
 }
 
 .case-head {
@@ -338,18 +339,18 @@ section:not(.hero) { padding: 88px 0; }
 .case-status--flagged { background: var(--flag-soft); color: var(--flag); }
 .case-status--cleared { background: var(--teal-soft); color: var(--teal); }
 .case-status--live { background: var(--teal-soft); color: var(--teal); }
-.case-status--shipped { background: rgba(201, 194, 179, 0.15); color: var(--hairline); }
+.case-status--shipped { background: rgba(21, 23, 26, 0.06); color: var(--ink-soft); }
 
 .case-card h3 {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 600;
   margin: 0 0 14px;
-  color: var(--paper);
+  color: var(--ink);
 }
 
-.case-card p { font-size: 14px; color: #C7CDD1; margin: 0 0 12px; }
-.case-card strong { color: var(--paper); font-weight: 600; }
+.case-card p { font-size: 14px; color: var(--ink-soft); margin: 0 0 12px; }
+.case-card strong { color: var(--ink); font-weight: 600; }
 
 .case-tools {
   display: flex;
@@ -362,9 +363,9 @@ section:not(.hero) { padding: 88px 0; }
   font-family: var(--font-mono);
   font-size: 11px;
   padding: 4px 9px;
-  border: 1px solid rgba(201, 194, 179, 0.3);
+  border: 1px solid var(--hairline);
   border-radius: 999px;
-  color: var(--hairline);
+  color: var(--ink-soft);
 }
 
 .case-link {
@@ -379,10 +380,10 @@ section:not(.hero) { padding: 88px 0; }
 .case-link:hover { border-color: var(--flag); }
 
 /* ---------- SKILLS ---------- */
-.skills { border-top: 1px solid rgba(201, 194, 179, 0.15); }
+.skills { border-top: 1px solid var(--hairline); }
 
 .skills-table {
-  border-top: 1px solid rgba(201, 194, 179, 0.25);
+  border-top: 1px solid var(--ink);
 }
 
 .skills-row {
@@ -390,7 +391,7 @@ section:not(.hero) { padding: 88px 0; }
   grid-template-columns: 200px 1fr;
   gap: 24px;
   padding: 18px 0;
-  border-bottom: 1px solid rgba(201, 194, 179, 0.15);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .skills-key {
@@ -402,12 +403,12 @@ section:not(.hero) { padding: 88px 0; }
 
 .skills-val {
   font-size: 14.5px;
-  color: #C7CDD1;
+  color: var(--ink-soft);
   line-height: 1.7;
 }
 
 /* ---------- CONTACT ---------- */
-.contact { border-top: 1px solid rgba(201, 194, 179, 0.15); }
+.contact { border-top: 1px solid var(--hairline); }
 
 .contact-links {
   display: flex;
@@ -419,8 +420,8 @@ section:not(.hero) { padding: 88px 0; }
 .contact-links a {
   font-family: var(--font-mono);
   font-size: 15px;
-  color: var(--paper);
-  border-bottom: 1px solid rgba(201, 194, 179, 0.35);
+  color: var(--ink);
+  border-bottom: 1px solid var(--hairline);
   padding-bottom: 3px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -428,7 +429,7 @@ section:not(.hero) { padding: 88px 0; }
 
 /* ---------- FOOTER ---------- */
 .site-footer {
-  border-top: 1px solid rgba(201, 194, 179, 0.15);
+  border-top: 1px solid var(--hairline);
   padding: 28px 0;
 }
 
