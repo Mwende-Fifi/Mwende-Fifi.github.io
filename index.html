@@ -23,7 +23,7 @@
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="resume-link" href="https://docs.google.com/document/d/1siLXDiy4cpmuDW8k2YH6r8OGDNjC9HG1AFbXxNiY3c8/edit?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+    <a class="resume-link" href="https://docs.google.com/document/u/1/d/1siLXDiy4cpmuDW8k2YH6r8OGDNjC9HG1AFbXxNiY3c8/edit?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
   </div>
 </header>
 
@@ -33,7 +33,7 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-text">
-        <p class="eyebrow">Data Analyst · Fraud &amp; Risk Analytics · Fintech</p>
+        <p class="eyebrow">Data Analyst specializing in Fraud, Risk &amp; Fintech</p>
         <h1>I find where the money moves&nbsp;wrong.</h1>
         <p class="hero-sub">I analyze transaction and user data to trace where fraud, risk, and revenue actually move — then build the pipelines, models, and dashboards that let risk and product teams act on it. Currently based in Nairobi, Kenya.</p>
         <div class="hero-actions">
@@ -50,6 +50,29 @@
           <!-- rows injected by script.js -->
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAR + FEATURED CASE STUDY -->
+  <section class="proof">
+    <div class="wrap">
+      <div class="proof-bar">
+        <span>Fraud &amp; Risk Analytics</span>
+        <span>Python / SQL</span>
+        <span>PostgreSQL / MongoDB</span>
+        <span>Fintech Experience</span>
+      </div>
+
+      <a href="#case-01" class="featured">
+        <span class="featured-label">Featured case study</span>
+        <h2 class="featured-question">Can we catch more fraud without overwhelming investigators?</h2>
+        <p class="featured-meta">284,807 transactions · 0.172% fraud rate · XGBoost · threshold optimization</p>
+        <div class="featured-metrics">
+          <span><strong>76%</strong> recall</span>
+          <span><strong>74%</strong> precision</span>
+          <span><strong>20</strong> false positives</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -91,7 +114,7 @@
 
       <div class="case-grid">
 
-        <article class="case-card case-card--lead">
+        <article class="case-card case-card--lead" id="case-01">
           <div class="case-head">
             <span class="case-tag">CASE 01</span>
             <span class="case-status case-status--flagged">STATUS: THRESHOLD TUNED</span>
@@ -134,6 +157,25 @@
             </tbody>
           </table>
           <p class="case-detail">Chose t=0.75 — a recall-weighted threshold capped at 20 alerts, a workload a real team can process. Relative to the default, this cut false alarms from 45 to 20 at the cost of 4 additional missed frauds.</p>
+
+          <div class="threshold-chart" role="img" aria-label="False positive alerts by threshold: 5 at threshold 0.96, 20 at threshold 0.75 (chosen), 2,148 at threshold 0.01. Shown on a log scale since the range spans 400 times.">
+            <p class="threshold-chart-caption">False alerts generated, by threshold — log scale (linear would make the 5 and 20 bars invisible next to 2,148)</p>
+            <div class="tc-row">
+              <span class="tc-label">t = 0.96<br><span class="tc-sub">max F1</span></span>
+              <div class="tc-track"><div class="tc-bar" style="width: 18%;"></div></div>
+              <span class="tc-value">5</span>
+            </div>
+            <div class="tc-row tc-row--chosen">
+              <span class="tc-label">t = 0.75<br><span class="tc-sub">chosen</span></span>
+              <div class="tc-track"><div class="tc-bar tc-bar--chosen" style="width: 38%;"></div></div>
+              <span class="tc-value">20</span>
+            </div>
+            <div class="tc-row">
+              <span class="tc-label">t = 0.01<br><span class="tc-sub">&ge;90% recall</span></span>
+              <div class="tc-track"><div class="tc-bar" style="width: 100%;"></div></div>
+              <span class="tc-value">2,148</span>
+            </div>
+          </div>
 
           <p class="case-finding"><strong>Key takeaway:</strong> The model sets the ceiling; the threshold sets the outcome. Same model, three cutoffs, and false alarms swung from 5 to 2,148 — a 400× range driven entirely by a business decision, not a modeling one.</p>
 
