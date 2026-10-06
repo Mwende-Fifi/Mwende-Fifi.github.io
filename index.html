@@ -94,16 +94,53 @@
         <article class="case-card case-card--lead">
           <div class="case-head">
             <span class="case-tag">CASE 01</span>
-            <span class="case-status case-status--flagged">STATUS: SCORED</span>
+            <span class="case-status case-status--flagged">STATUS: THRESHOLD TUNED</span>
           </div>
-          <h3>Credit Risk Classification</h3>
-          <p class="case-problem"><strong>Problem:</strong> Predict loan default risk from applicant financial data, where a model's blind spots have real repayment consequences.</p>
-          <p class="case-detail">Engineered domain-specific features — loan-to-income ratio, interest burden — before touching a model. Benchmarked Logistic Regression, Random Forest, and XGBoost, selecting the final classifier on cross-validated F1 to guard against overfitting rather than headline accuracy.</p>
-          <p class="case-finding"><strong>Finding:</strong> Feature engineering moved the needle more than model choice — a result worth showing lenders who default to "just add more models."</p>
+          <h3>Fraud Detection on Highly Imbalanced Transaction Data</h3>
+
+          <p class="case-problem"><strong>Problem:</strong> Credit card fraud detection on the Kaggle creditcardfraud dataset — 284,807 transactions, only 492 fraudulent (0.172%). Standard accuracy is meaningless here: predicting "legit" for every transaction scores 99.83%. The real challenge is catching fraud without drowning analysts in false alarms.</p>
+
+          <p class="case-subhead">Approach</p>
+          <ul class="case-approach">
+            <li>Stratified 70/15/15 train/validation/test split, preserving the fraud ratio in each set</li>
+            <li>Exploratory analysis on transaction Amount — found fraud's median ($9.25) is <em>lower</em> than legit's ($22), despite a higher mean, revealing heavy right-skew</li>
+            <li>Baseline logistic regression (scaled features, fit on train only)</li>
+            <li>XGBoost with <code>scale_pos_weight</code> set to the class ratio (578:1) to counter the imbalance</li>
+            <li>Threshold sweep across 101 cutoffs (0.00 → 1.00), evaluating precision, recall, and error counts at each</li>
+          </ul>
+
+          <p class="case-subhead">Results</p>
+          <table class="case-table">
+            <thead>
+              <tr><th>Model</th><th>AUC</th><th>Precision</th><th>Recall</th><th>F1</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Logistic Regression</td><td>0.9571</td><td>0.786</td><td>0.595</td><td>0.677</td></tr>
+              <tr><td>XGBoost</td><td>0.9765</td><td>0.571</td><td>0.811</td><td>0.670</td></tr>
+            </tbody>
+          </table>
+          <p class="case-detail">XGBoost won on AUC and recall — catching 60 of 74 frauds vs 44 — but at the cost of more false alarms (45 vs 12). F1 stayed flat because precision and recall moved in opposite directions.</p>
+
+          <p class="case-subhead">Decision layer</p>
+          <p class="case-detail">Rather than accept the default 0.5 threshold, I swept all cutoffs and compared three operating points:</p>
+          <table class="case-table">
+            <thead>
+              <tr><th>Operating point</th><th>Threshold</th><th>Precision</th><th>Recall</th><th>FP</th><th>FN</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Max F1</td><td>0.96</td><td>0.92</td><td>0.73</td><td>5</td><td>20</td></tr>
+              <tr class="case-table-row--chosen"><td>Chosen</td><td>0.75</td><td>0.74</td><td>0.76</td><td>20</td><td>18</td></tr>
+              <tr><td>≥90% recall</td><td>0.01</td><td>0.03</td><td>0.92</td><td>2,148</td><td>6</td></tr>
+            </tbody>
+          </table>
+          <p class="case-detail">Chose t=0.75 — a recall-weighted threshold capped at 20 alerts, a workload a real team can process. Relative to the default, this cut false alarms from 45 to 20 at the cost of 4 additional missed frauds.</p>
+
+          <p class="case-finding"><strong>Key takeaway:</strong> The model sets the ceiling; the threshold sets the outcome. Same model, three cutoffs, and false alarms swung from 5 to 2,148 — a 400× range driven entirely by a business decision, not a modeling one.</p>
+
           <div class="case-tools">
-            <span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Cross-validation</span>
+            <span>Python</span><span>pandas</span><span>scikit-learn</span><span>XGBoost</span><span>matplotlib</span>
           </div>
-          <a href="https://github.com/Mwende-Fifi" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
+          <a href="https://github.com/Mwende-Fifi/fraud-detection" class="case-link" target="_blank" rel="noopener">View repo ↗</a>
         </article>
 
         <article class="case-card">
