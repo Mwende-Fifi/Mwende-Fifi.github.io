@@ -280,7 +280,7 @@ footer a:hover{color:var(--on-ink)}
         <p class="direction">I'm looking for Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, or Junior Data Scientist roles, particularly in fintech and financial services.</p>
       </div>
       <div class="exp">
-        <h3 class="label">Experience: Hurupay, fintech internship</h3>
+        <h3 class="label">Experience: Kolan, fintech internship</h3>
         <ul>
           <li><span>Analysis</span><span>Built anomaly detection scripts directly on payment event data.</span></li>
           <li><span>Databases</span><span>Wrote multi-table SQL across MongoDB and PostgreSQL to support fraud workflows.</span></li>
@@ -308,7 +308,7 @@ footer a:hover{color:var(--on-ink)}
 
 <section id="projects" aria-labelledby="proj-h">
   <div class="wrap">
-    <div class="sec-head"><p class="label"><span class="num">02</span> / Work</p><h2 id="proj-h">Case Files</h2><p class="sub">Selected work, ordered by relevance, not by date.</p></div>
+        <div class="sec-head"><p class="label"><span class="num">02</span> / Work</p><h2 id="proj-h">Case Files</h2></div>
 
     <article class="case-feature" aria-labelledby="c1">
       <div class="case-top"><span class="label">Case 01 / Featured investigation</span><span class="st" style="color:var(--accent)">Status: Threshold tuned</span></div>
@@ -453,10 +453,9 @@ footer a:hover{color:var(--on-ink)}
     <p class="label"><span class="num">04</span> / Contact</p>
     <h2 id="ct-h">Looking for the next signal.</h2>
     <p class="roles">Open to Data Analyst, Fraud/Risk Analyst, Credit Risk Analyst, and Junior Data Scientist roles.</p>
-    <div class="primary">
-      <a class="email ul" href="mailto:kiindufaith7@gmail.com" aria-label="Email Faith at kiindufaith7@gmail.com">kiindufaith7@gmail.com</a>
-      <button class="copy" id="cp" type="button" data-email="kiindufaith7@gmail.com">COPY EMAIL</button>
-      <span id="cps" class="sr" role="status"></span>
+        <div class="primary">
+      <a class="email ul" href="https://calendar.app.google/XVWsgEVRVyCGHrEk7" target="_blank" rel="noopener">Book a quick intro chat →<span class="sr"> (opens in new tab)</span></a>
+      <a class="copy" href="https://calendar.app.google/XVWsgEVRVyCGHrEk7" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center">OPEN CALENDAR</a>
     </div>
     <ul class="more" aria-label="Other ways to connect">
       <li><a class="ul" href="https://www.linkedin.com/in/faith-mwende-kiindu/" target="_blank" rel="noopener">LinkedIn: view profile →<span class="sr"> (opens in new tab)</span></a></li>
@@ -473,7 +472,7 @@ footer a:hover{color:var(--on-ink)}
     <ul aria-label="Social links">
       <li><a class="ul" href="https://github.com/Mwende-Fifi" target="_blank" rel="noopener">GitHub<span class="sr"> (opens in new tab)</span></a></li>
       <li><a class="ul" href="https://www.linkedin.com/in/faith-mwende-kiindu/" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in new tab)</span></a></li>
-      <li><a class="ul" href="mailto:kiindufaith7@gmail.com">Email</a></li>
+            <li><a class="ul" href="https://calendar.app.google/XVWsgEVRVyCGHrEk7" target="_blank" rel="noopener">Book a call<span class="sr"> (opens in new tab)</span></a></li>
     </ul>
   </div>
 </footer>
@@ -492,12 +491,7 @@ footer a:hover{color:var(--on-ink)}
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){var on=a.getAttribute('href')==='#'+e.target.id;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')})})},{rootMargin:'-40% 0px -55% 0px'});
     ['about','projects','skills','contact'].forEach(function(id){io.observe(document.getElementById(id))});
   }
-  var cp=document.getElementById('cp'),cs=document.getElementById('cps'),t;
-  function say(m){cp.textContent=m==='ok'?'COPIED':'COPY EMAIL';cs.textContent=m==='ok'?'Email address copied':'Copy unavailable. Select the address above to copy it.';clearTimeout(t);t=setTimeout(function(){cp.textContent='COPY EMAIL';cs.textContent=''},2500)}
-  cp.addEventListener('click',function(){
-    if(!navigator.clipboard){say('fail');return}
-    navigator.clipboard.writeText(cp.dataset.email).then(function(){say('ok')},function(){say('fail')});
-  })
+
     /* live transaction feed */
   var feed=document.getElementById('feed'),
       fc=document.getElementById('feed-count'),
